@@ -1,0 +1,177 @@
+Screen {
+    layers: base;
+}
+
+Header {
+    dock: top;
+    background: $primary 50%;
+    color: $text;
+    height: 1;
+}
+
+#repo-header {
+    layout: horizontal;
+    height: 1;
+}
+
+#header-repo-name {
+    width: 1fr;
+    text-style: bold;
+    padding: 0 1;
+}
+
+#header-stars,
+#header-forks,
+#header-watchers {
+    width: auto;
+    padding: 0 1;
+    text-style: italic;
+    color: $text-muted;
+}
+
+#main-container {
+    layout: horizontal;
+    height: 1fr;
+}
+
+#left-sidebar {
+    width: 30;
+    min-width: 18;
+    max-width: 40;
+    height: 1fr;
+    border: solid $secondary;
+    background: $surface;
+    overflow: auto;
+}
+
+#file-tree {
+    height: 1fr;
+}
+
+#center-panel {
+    width: 1fr;
+    height: 1fr;
+    border: solid $primary;
+}
+
+#content-tabs {
+    height: 1fr;
+}
+
+#code-viewer {
+    height: 1fr;
+    padding: 1;
+    background: $boost;
+}
+
+#readme-viewer {
+    height: 1fr;
+    padding: 1;
+    background: $boost;
+}
+
+#issues-list {
+    height: 1fr;
+    padding: 1;
+    background: $boost;
+}
+
+#actions-view {
+    height: 1fr;
+    padding: 1;
+    background: $boost;
+}
+
+#right-sidebar {
+    width: 24;
+    min-width: 16;
+    max-width: 32;
+    height: 1fr;
+    border: solid $secondary;
+    background: $surface;
+    overflow: auto;
+}
+
+.sidebar-section-title {
+    text-style: bold;
+    background: $primary 30%;
+    color: $text;
+    padding: 0 1;
+    height: 1;
+}
+
+#languages-content,
+#contributors-content {
+    height: auto;
+    padding: 0 1;
+}
+
+.issue-badge {
+    height: 1;
+    padding: 0 1;
+    width: 6;
+}
+
+.issue-open {
+    color: $success;
+    text-style: bold;
+}
+
+.issue-closed {
+    color: $error;
+    text-style: bold;
+}
+
+.issue-title-label {
+    height: 1;
+    padding: 0 1;
+    width: 1fr;
+}
+
+.issue-author {
+    height: 1;
+    padding: 0 1;
+    color: $text-muted;
+    width: auto;
+}
+
+.action-label {
+    height: 1;
+    padding: 0 1;
+    width: 16;
+    text-style: bold;
+}
+
+.action-branch {
+    height: 1;
+    padding: 0 1;
+    width: 1fr;
+    color: $text-muted;
+}
+
+.action-status {
+    height: 1;
+    padding: 0 1;
+    width: 12;
+    text-align: right;
+}
+
+.action-pass {
+    color: $success;
+}
+
+.action-fail {
+    color: $error;
+}
+
+#error-message {
+    height: 1fr;
+    content-align: center middle;
+    color: $error;
+    text-style: bold;
+}
+
+Footer {
+    dock: bottom;
+    background: $primary 30%;
+}

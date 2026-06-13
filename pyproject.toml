@@ -1,0 +1,62 @@
+[build-system]
+requires = ["setuptools>=64.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "gitboard"
+version = "0.1.0"
+description = "A visually rich, pip-installable Terminal User Interface (TUI) client for GitHub"
+readme = "README.md"
+requires-python = ">=3.10"
+license = {text = "MIT"}
+authors = [
+    {name = "Jyotirmoy Ghosh (Ritam)"},
+]
+keywords = ["github", "tui", "terminal", "cli", "console", "textual", "developer-tools"]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Environment :: Console",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: POSIX :: Linux",
+    "Operating System :: MacOS :: MacOS X",
+    "Operating System :: Microsoft :: Windows",
+    "Programming Language :: Python :: 3 :: Only",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Topic :: Software Development :: Version Control :: Git",
+    "Topic :: Software Development :: User Interfaces",
+    "Topic :: Internet",
+]
+dependencies = [
+    "httpx>=0.25.0",
+    "keyring>=24.0.0",
+    "GitPython>=3.1.0",
+    "textual>=0.41.0",
+    "rich>=13.0.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.0",
+    "pytest-mock>=3.0",
+    "respx>=0.20.0",
+]
+
+[project.urls]
+Homepage = "https://github.com/gitboard/gitboard"
+Repository = "https://github.com/gitboard/gitboard"
+Issues = "https://github.com/gitboard/gitboard/issues"
+
+[project.scripts]
+gitboard = "gitboard.main:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+include = ["gitboard*"]
+
+[tool.pytest.ini_options]
+asyncio_mode = "auto"
+testpaths = ["tests"]
