@@ -49,8 +49,9 @@ def store_pat(token: str) -> None:
 
     token_file = _get_token_file()
     token_file.parent.mkdir(parents=True, exist_ok=True)
-    token_file.write_text(token)
+    token_file.touch(mode=0o600, exist_ok=True)
     token_file.chmod(0o600)
+    token_file.write_text(token)
     logger.info("token stored in %s", token_file)
 
 
