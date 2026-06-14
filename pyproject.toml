@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "gitboard"
-version = "0.1.1"
+version = "0.1.3"
 description = "A visually rich, pip-installable Terminal User Interface (TUI) client for GitHub"
 readme = "README.md"
 requires-python = ">=3.10"
@@ -46,9 +46,9 @@ dev = [
 ]
 
 [project.urls]
-Homepage = "https://github.com/gitboard/gitboard"
-Repository = "https://github.com/gitboard/gitboard"
-Issues = "https://github.com/gitboard/gitboard/issues"
+Homepage = "https://github.com/trixxexe/gitboard"
+Repository = "https://github.com/trixxexe/gitboard"
+Issues = "https://github.com/trixxexe/gitboard/issues"
 
 [project.scripts]
 gitboard = "gitboard.main:main"
